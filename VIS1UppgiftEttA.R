@@ -9,14 +9,14 @@ graf1 <- ggplot(data = PARTIER, aes(x = reorder(Parti, Procent), # HÃ¤r define
     ggtitle("Svenska folkets partisympati i procent(%)") + #Detta sÃ¤tter main-titeln pÃ¥ grafen 
     labs(caption = "Källa: SCB Undersökning",  # detta sÃ¤tter en footnote pÃ¥ grafen
             fill = "Partier") + #hÃ¤r sÃ¤tter vi ocksÃ¥ fÃ¤rgerna fÃ¶r staplarna
-    theme_bw() +
-    theme(axis.title.y = element_text(angle = 0, size = 14),
-          axis.title.x = element_text(size = 14),
-          plot.title = element_text(size = 14),
-          plot.caption = element_text(size =10),
-          axis.text.x = element_text(size = 14),
-          axis.text.y = element_text(size = 14),
-          panel.grid.major.y = element_blank()) + # hÃ¤r sÃ¤tter vi xlabeln horizontellt
+    theme_bw() + # detta tar g�r bakgrunden vit
+    theme(axis.title.y = element_text(angle = 0, size = 14), # h�r s�tter vi y labeln horizontellt och �ndrar storleken
+          axis.title.x = element_text(size = 14), # h�r �ndrar vi storlek f�r x label
+          plot.title = element_text(size = 14), # h�r �ndrar vi storlek f�r titel
+          plot.caption = element_text(size =10), # h�r �ndrar vi storlek f�r caption
+          axis.text.x = element_text(size = 14), # h�r �ndrar vi storlek f�r x axel texten
+          axis.text.y = element_text(size = 14), # h�r �ndrar vi storlek f�r y axel texten
+          panel.grid.major.y = element_blank()) +  # h�r tar vi bort st�dlinjerna f�r y axeln
     scale_fill_manual(values= c("#009933", "#231977", "#6BB7EC", # dessa Ã¤r fÃ¤rgerna fÃ¶r partierna
                                 "#83CF39", "#1B49DD", "#EE2020", # vi hade dock ett problem med dessa, nÃ¤mligen att staplarna sorterades efter 
                                 "#DDDD00", "#AF0000", "grey"))    # bokstavsordning istÃ¤llet fÃ¶r storleksordning, sÃ¥ fÃ¤rgerna Ã¤r inte rÃ¤tt.
