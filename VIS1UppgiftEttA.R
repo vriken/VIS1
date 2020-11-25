@@ -7,7 +7,7 @@ graf1 <- ggplot(data = PARTIER, aes(x = reorder(Parti, Procent), # HÃ¤r define
     geom_bar(stat = "identity", show.legend = FALSE) + #Detta anvÃ¤nds sÃ¥ att det inte Ã¤r frekvensen av Partier som rÃ¤knas, utan istÃ¤llet Procenten. Eftersom geom_bar() som standard anvÃ¤nder stat_count() fÃ¶r att plotta. Detta Ã¶verskrivs genom stat_identity(), eller stat = "identity"
     xlab("Parti") + ylab("Procent(%)") + #detta sÃ¤tter texten pÃ¥ xlabeln, och ylabeln till Procent(%), och Parti respektive.
     ggtitle("Svenska folkets partisympati i procent(%)") + #Detta sÃ¤tter main-titeln pÃ¥ grafen 
-    labs(caption = "Källa: SCB Undersökning",  # detta sÃ¤tter en footnote pÃ¥ grafen
+    labs(caption = "K�lla: SCB Unders�kning",  # detta sÃ¤tter en footnote pÃ¥ grafen
             fill = "Partier") + #hÃ¤r sÃ¤tter vi ocksÃ¥ fÃ¤rgerna fÃ¶r staplarna
     theme_bw() + # detta tar g�r bakgrunden vit
     theme(axis.title.y = element_text(angle = 0, size = 14), # h�r s�tter vi y labeln horizontellt och �ndrar storleken

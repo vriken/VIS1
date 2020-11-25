@@ -1,6 +1,6 @@
 library("ggplot2") # Detta inkluderar biblioteket "ggplot2" så att funktioner från biblioteket kan användas.
-setwd("//ad.liu.se/home/akero580/Desktop") #Detta ändrar den pekade directoryn på datorn som koden jobbar i. Kom ihåg att ändra detta innan koden testas!
-datan <- read.csv2("VIS1 Lon.csv")#Detta läser filen från det pekade directoryt som vi definerar i raden ovan denna. Vi tilldelar denna fil namnet datan. Kom ihåg att ändra detta innan koden testas!
+setwd("C:\\Users\\vrike\\Downloads") #Detta ändrar den pekade directoryn på datorn som koden jobbar i. Kom ihåg att ändra detta innan koden testas!
+datan <- read.csv("VIS1 Lon.csv")#Detta läser filen från det pekade directoryt som vi definerar i raden ovan denna. Vi tilldelar denna fil namnet datan. Kom ihåg att ändra detta innan koden testas!
  
 ggplot(datan, aes(Lon)) + # detta skapar och ropar på en funktion ggplot med variablerna datan, och en aesthetic för Lon kolumnen i datan
   xlab("Lön") + ylab("Frekvens") +  # här sätter vi labels för x och y, Lön, och Frekvens respektive.
